@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "EmployeeDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Employee Details</h2>
+
+<div ng-controller="EmployeeDetails">
+
+    <p>{{message}}</p>
+
+    <br />
+    <input type="text" name="keyword" ng-model="searchBy" required />
+    <a href="" ng-click="getEmployee()">Get Employee</a>
+    <br />
+    <br />
+    <p>Id: {{employee.id}}</p>
+    <p>Full Name: {{employee.name}}</p>
+    <p>Job Title: {{employee.jobTitle}}</p>
+    <p>Age: {{employee.age}}</p>
+</div>
+

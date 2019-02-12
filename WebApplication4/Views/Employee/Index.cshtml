@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employee List</h2>
+
+<form>
+    <div ng-controller="EmployeeIndex">
+
+        <b>{{message}}</b>
+
+        <table border="1">
+            <tr ng-repeat="employee in employeeList">
+                <td>{{employee.id}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.age}}</td>
+                <td>{{employee.jobTitle}}</td>
+                <td><a href="/Employee/UpdateEmployee?id={{employee.id}}">Update</a></td>
+                <td><a ng-click="DeleteEmployee(employee.id)">Delete</a></td>
+            </tr>
+        </table>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+    </div>
+</form>
+

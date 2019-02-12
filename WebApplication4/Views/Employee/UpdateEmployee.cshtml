@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Update Employee</h2>
+<div ng-controller="UpdateEmployee" data-ng-init="loadrecord(@Convert.ToInt32(Request.QueryString["id"]))">
+
+
+    <p>{{message}}</p>
+
+    <br />
+    <table>
+        <tr>
+            <td>Id:</td>
+            <td>{{employee.id}}</td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" ng-model="employee.name"  /></td>
+        </tr>
+        <tr>
+            <td>Job Title:</td>
+            <td><input type="text" ng-model="employee.jobTitle" /></td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td><input type="text" ng-model="employee.age" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a ng-click="UpdateEmployee()">Update</a></td>
+        </tr>
+    </table>
+</div>
+</div>
+

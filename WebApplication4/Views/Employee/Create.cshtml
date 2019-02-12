@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div ng-controller="EmployeePost">
+    <h2>Add Employee</h2>
+    <b>{{message}}</b>
+    <form ng-submit="addEmployee()">
+
+        FullName: <input type="text" ng-model="newEmployee.name" />
+
+        Job Title: <input type="text" ng-model="newEmployee.jobTitle" />
+
+        Age: <input type="number" ng-model="newEmployee.age" />
+
+        <button type="submit">Submit</button>
+    </form>
+    </div>
